@@ -79,7 +79,7 @@ paths:
         200:
           description: "successful operation"
           schema:
-            $ref: "#/definitions/Products"
+            $ref: "#/definitions/OrderDetails"
         400:
           description: "Invalid ID supplied"
         404:
@@ -157,3 +157,32 @@ definitions:
         type: "string"
         description: "Order Price"
         example: "45,000"               
+  OrderDetails:
+    type: "object"
+    properties:
+      Name:
+        type: "string"
+        description: "Name of the customer"
+        example: "Mr.Kousik Madavan"
+      Invoice:
+        type: "string"
+        description: "Product IDS"
+        example: "Your Order Details
+		Order no.: 038362i3-93729383
+		Delivery Address : No:1, Kalniketan Apartmenbts, anna nagar, chennai-001
+		Billing Details	
+			Package Value : 45,000
+			Mode of Payment : COD "
+        items:
+            properties:
+              type:
+                type: string
+                example: "1" 
+      address:
+        type: "string"
+        description: "Delivery Address"
+        example: "No:1, Radission Apartments, Anna nagar, Chennai-001"             
+      price:
+        type: "string"
+        description: "Order Price"
+        example: "45,000"                     
