@@ -2,17 +2,17 @@
 
 Developed this application with three end points.
 
-GET (​/products​/{id}) - Fetch Product based on product id
+1.GET (​/products​/{id}) - Fetch Product based on product id
 
-Returns the products matching the provided product id from the products table.
+  Returns the products matching the provided product id from the products table.
 
-POST (​/products) - Add product(s) to inventory
+2.POST (​/products) - Add product(s) to inventory
 
-Adds the prouducts to the inv.products table. 
+  Adds the prouducts to the inv.products table. 
 
-POST (​/products​/order) - Order products
+3.POST (​/products​/order) - Order products
 
-Place the order for the product using RabbitMQ.
+  Place the order for the product using RabbitMQ.
 
 Docker Commands:
 
